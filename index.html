@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body ng-app="student" ng-controller="studentCtrl">
+
+    <nav class="navbar navbar-expand-sm|md|lg|-xl navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="#">Dashboard</a>
+            <ul class="nav justify-content-center|justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="#/">Home</a>
+                </li>
+                <div class="dropdown open">
+                    <a class="btn dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"aria-expanded="false">Manage Student</a>
+                    <div class="dropdown-menu" aria-labelledby="triggerId">
+                        <a class="dropdown-item" href="#displayStudents">Display</a>
+                        <a class="dropdown-item" href="#addStudent">Add</a>
+                    </div>
+                </div>
+                <div class="dropdown open">
+                    <a class="btn dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"aria-expanded="false">Search</a>
+                    <div class="dropdown-menu" aria-labelledby="triggerId">
+                        <a class="dropdown-item" href="#searchID">ID Search</a>
+                        <a class="dropdown-item" href="#MCAstudents">MCA students</a>
+                        <a class="dropdown-item" href="#maleAGrade">Male A Grade</a>
+                    </div>
+                </div>
+            </ul>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/manage">Manage Students</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/search">Search</a>
+                    </li>
+                </ul>
+            </div>
+      </div>
+    </nav>
+
+    <ng-view></ng-view>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

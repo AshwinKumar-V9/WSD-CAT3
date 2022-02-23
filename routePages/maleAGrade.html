@@ -1,0 +1,29 @@
+
+<div class="container mt-3" ng-controller="maleCtrl">
+    <h1>Male A Grade Students</h1>
+
+    <table class="table table-collapse mt-5">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Course</th>
+                <th>Address</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="stu in students | filter: gender">
+            <tr>
+                <th>{{stu.stu_id}}</th>
+                <th>{{stu.stu_name}}</th>
+                <th>{{stu.age}}</th>
+                <th>{{stu.gender}}</th>
+                <th>{{stu.course}}</th>
+                <th>{{stu.address}}</th>
+                <th>{{stu.grade}}</th>
+            </tr>
+        </tbody>
+    </table>
+</div>

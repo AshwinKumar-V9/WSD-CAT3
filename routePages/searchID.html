@@ -1,0 +1,38 @@
+
+<div class="container mt-3" ng-controller="searchCtrl">
+    <h1>Search by ID</h1>
+
+    <div class="my-5">
+        <label for="SID">Student ID:</label>
+        <input type="text" id="SID" ng-model="SID">
+    </div>
+
+    <table class="table table-collapse mt-5">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Course</th>
+                <th>Address</th>
+                <th>Grade</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="stu in students | filter: SID">
+            <tr>
+                <th>{{stu.stu_id}}</th>
+                <th>{{stu.stu_name}}</th>
+                <th>{{stu.age}}</th>
+                <th>{{stu.gender}}</th>
+                <th>{{stu.course}}</th>
+                <th>{{stu.address}}</th>
+                <th>{{stu.grade}}</th>
+                <th><span class="material-icons">edit</span></th>
+                <th><span class="material-icons" onclick="delStudent(stu.stu_id)">delete</span></th>
+            </tr>
+        </tbody>
+    </table>
+</div>

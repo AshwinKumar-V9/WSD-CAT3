@@ -1,0 +1,26 @@
+{
+  "name": "wsd-cat3",
+  "version": "1.0.0",
+  "description": "Repo for WSD CAT Test 1 (22/02/2022)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshwinKumar-V9/WSD-CAT3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AshwinKumar-V9/WSD-CAT3/issues"
+  },
+  "homepage": "https://github.com/AshwinKumar-V9/WSD-CAT3#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-formidable": "^1.2.0",
+    "formidable": "^2.0.1",
+    "mysql2": "^2.3.3"
+  }
+}
